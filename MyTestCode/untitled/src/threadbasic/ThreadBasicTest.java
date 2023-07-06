@@ -3,6 +3,11 @@ package threadbasic;
 import java.util.Random;
 import java.util.stream.IntStream;
 
+/**
+ * @author Nick
+ * wait for 2 threads termination using Thread.join()
+ *
+ */
 public class ThreadBasicTest {
 
     public static void main(String[] args) {
