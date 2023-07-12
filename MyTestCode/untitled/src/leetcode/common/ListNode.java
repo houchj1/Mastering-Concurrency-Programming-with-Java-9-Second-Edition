@@ -37,6 +37,10 @@ public class ListNode {
         return header.next;
     }
 
+    /**
+     * a int string is in a reverse order, and take it whole as int, first node is the lowest bit of int
+     * @return
+     */
     public String toIntString() {
         String s = "]";
         ListNode list = this;
@@ -46,5 +50,20 @@ public class ListNode {
         }
         s = ("[") + s;
         return s;
+    }
+
+    /**
+     * the normal order first node is on the left
+     * @return
+     */
+    public String toNormalString() {
+        StringBuilder sb = new StringBuilder("[");
+        ListNode list = this;
+        while (list != null) {
+            sb.append(list.val + ", ");
+            list = list.next;
+        }
+        sb.append("]");
+        return sb.toString();
     }
 }
