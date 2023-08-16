@@ -1,6 +1,9 @@
 package leetcode;
 
+import org.junit.Assert;
 import org.junit.Test;
+
+import static org.junit.Assert.assertEquals;
 
 /**
  * trapping rain water.
@@ -45,7 +48,7 @@ public class LeetCode042Test {
     @Test
     public void test1() {
         int ret = LeetCode042Test.trap(new int[]{1, 0, 2, 1, 3, 1, 4, 3, 1, 3});
-        assert ret == 6;
+        assertEquals(ret, 6);
 
         ret = LeetCode042Test.trap(new int[]{1, 0, 2});
         assert ret == 1;
