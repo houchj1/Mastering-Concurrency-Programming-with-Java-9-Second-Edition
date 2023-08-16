@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="data1">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/Chapter11/Synchronization/data.zip!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

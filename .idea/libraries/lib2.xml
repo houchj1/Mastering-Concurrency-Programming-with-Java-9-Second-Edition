@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="lib2">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/Chapter12/TestTC/lib/junit-4.12.jar!/" />
+      <root url="jar://$PROJECT_DIR$/Chapter12/TestTC/lib/MultithreadedTC-1.01.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

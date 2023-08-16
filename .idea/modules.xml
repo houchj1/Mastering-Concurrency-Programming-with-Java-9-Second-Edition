@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/Chapter03/Chapter03.iml" filepath="$PROJECT_DIR$/Chapter03/Chapter03.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Chapter06/Chapter06.iml" filepath="$PROJECT_DIR$/Chapter06/Chapter06.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Chapter08/Chapter08.iml" filepath="$PROJECT_DIR$/Chapter08/Chapter08.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Chapter11/DataStructures/DataStructures.iml" filepath="$PROJECT_DIR$/Chapter11/DataStructures/DataStructures.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Chapter10/EventNotificationSystem/EventNotificationSystem.iml" filepath="$PROJECT_DIR$/Chapter10/EventNotificationSystem/EventNotificationSystem.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Chapter02/FileSearch/FileSearch.iml" filepath="$PROJECT_DIR$/Chapter02/FileSearch/FileSearch.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Chapter08/IRSystem/IRSystem.iml" filepath="$PROJECT_DIR$/Chapter08/IRSystem/IRSystem.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Chapter07/KMeansClustering/KMeansClustering.iml" filepath="$PROJECT_DIR$/Chapter07/KMeansClustering/KMeansClustering.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/Mastering-Concurrency-Programming-with-Java-9-Second-Edition.iml" filepath="$PROJECT_DIR$/.idea/Mastering-Concurrency-Programming-with-Java-9-Second-Edition.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Chapter02/MatrixMultiplier/MatrixMultiplier.iml" filepath="$PROJECT_DIR$/Chapter02/MatrixMultiplier/MatrixMultiplier.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Chapter07/MergeSort/MergeSort.iml" filepath="$PROJECT_DIR$/Chapter07/MergeSort/MergeSort.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Chapter10/NewsNotificationSystem/NewsNotificationSystem.iml" filepath="$PROJECT_DIR$/Chapter10/NewsNotificationSystem/NewsNotificationSystem.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Chapter08/NumericalSummarizationRetail/NumericalSummarizationRetail.iml" filepath="$PROJECT_DIR$/Chapter08/NumericalSummarizationRetail/NumericalSummarizationRetail.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Chapter07/ObjectFilter/ObjectFilter.iml" filepath="$PROJECT_DIR$/Chapter07/ObjectFilter/ObjectFilter.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Chapter11/Synchronization/Synchronization.iml" filepath="$PROJECT_DIR$/Chapter11/Synchronization/Synchronization.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Chapter12/B05875EN_12_code/Chapter12/TestInformation/TestInformation.iml" filepath="$PROJECT_DIR$/Chapter12/B05875EN_12_code/Chapter12/TestInformation/TestInformation.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Chapter12/TestInformation/TestInformation1.iml" filepath="$PROJECT_DIR$/Chapter12/TestInformation/TestInformation1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Chapter12/B05875EN_12_code/TestInformation/TestInformation2.iml" filepath="$PROJECT_DIR$/Chapter12/B05875EN_12_code/TestInformation/TestInformation2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Chapter12/B05875EN_12_code/Chapter12/TestJPF/TestJPF.iml" filepath="$PROJECT_DIR$/Chapter12/B05875EN_12_code/Chapter12/TestJPF/TestJPF.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Chapter12/TestJPF/TestJPF1.iml" filepath="$PROJECT_DIR$/Chapter12/TestJPF/TestJPF1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Chapter12/B05875EN_12_code/TestJPF/TestJPF2.iml" filepath="$PROJECT_DIR$/Chapter12/B05875EN_12_code/TestJPF/TestJPF2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Chapter12/B05875EN_12_code/TestTC/TestTC.iml" filepath="$PROJECT_DIR$/Chapter12/B05875EN_12_code/TestTC/TestTC.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Chapter12/TestTC/TestTC1.iml" filepath="$PROJECT_DIR$/Chapter12/TestTC/TestTC1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Chapter12/B05875EN_12_code/Chapter12/TestTC/TestTC2.iml" filepath="$PROJECT_DIR$/Chapter12/B05875EN_12_code/Chapter12/TestTC/TestTC2.iml" />
+    </modules>
+  </component>
+</project>
