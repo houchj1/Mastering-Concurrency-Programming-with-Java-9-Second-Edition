@@ -14,4 +14,13 @@ public class MyUtility {
             System.out.println("]");
         }
     }
+
+    public static void printNums1(int[] nums) {
+        System.out.print("[");
+        StringBuilder sb = new StringBuilder();
+        Arrays.stream(nums).forEach( num -> sb.append("" + num + ","));
+        sb.delete(sb.length() - 1, sb.length());
+        System.out.print(sb.toString());
+        System.out.println("]");
+    }
 }
