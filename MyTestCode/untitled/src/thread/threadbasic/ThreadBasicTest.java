@@ -1,4 +1,4 @@
-package threadbasic;
+package thread.threadbasic;
 
 import java.util.Random;
 import java.util.stream.IntStream;

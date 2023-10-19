@@ -1,8 +1,7 @@
-package threadbasic;
+package thread.threadbasic;
 
 import java.util.ArrayList;
 import java.util.Collection;
-import java.util.List;
 import java.util.concurrent.*;
 import java.util.concurrent.atomic.AtomicInteger;
 
