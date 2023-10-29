@@ -3,7 +3,6 @@ package com.javferna.packtpub.book.mastering.structures.varhandle;
 import java.lang.invoke.MethodHandles;
 import java.lang.invoke.VarHandle;
 
-;
 
 public class VarHandleTask implements Runnable {
 
