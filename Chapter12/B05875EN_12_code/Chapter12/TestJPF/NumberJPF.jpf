@@ -1,4 +1,0 @@
-+classpath=${config_path}/bin
-target=com.javferna.packtpub.mastering.testing.main.MainNumber
- 
-

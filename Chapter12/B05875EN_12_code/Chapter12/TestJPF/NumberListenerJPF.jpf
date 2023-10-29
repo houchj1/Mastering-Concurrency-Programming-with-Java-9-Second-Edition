@@ -1,5 +1,0 @@
-+classpath=${config_path}/bin
-target=com.javferna.packtpub.mastering.testing.main.MainNumber
-listener=gov.nasa.jpf.listener.PreciseRaceDetector,gov.nasa.jpf.listener.CoverageAnalyzer
- 
-
