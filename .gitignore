@@ -45,7 +45,7 @@ Chapter12/TestInformation/bin
 Chapter12/TestJPF/bin
 Chapter12/TestTC/bin
 MyTestCode/untitled/out
-
+MyTestCode/untitled/target/
 
 
 
@@ -116,4 +116,4 @@ Network Trash Folder
 Temporary Items
 .apdisk
 MyTestCode/untitled/out/production/untitled/**.class
-
+MyTestCode/untitled/out/production/untitled/target/
