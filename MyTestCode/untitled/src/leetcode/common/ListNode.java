@@ -52,6 +52,11 @@ public class ListNode {
         return s;
     }
 
+    @Override
+    public String toString() {
+        return this.toNormalString();
+    }
+
     /**
      * the normal order first node is on the left
      * @return

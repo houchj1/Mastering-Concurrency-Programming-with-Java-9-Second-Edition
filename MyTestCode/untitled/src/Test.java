@@ -1,67 +1,43 @@
+import leetcode.common.ListNode;
+
 import java.util.Arrays;
+import java.util.Comparator;
+import java.util.PriorityQueue;
 
 public class Test {
 
-    public static void mergeSort(int[] arr, int l, int r) {
-        if (l < r) {
-            int m = l + (r - l) / 2;
-            mergeSort(arr, l, m);
-            mergeSort(arr, m + 1, r);
-            merge(arr, l, m, r);
-        }
-    }
+    public static ListNode mergeKSortedList(ListNode[] lists) {
 
-    private static void merge(int[] arr, int l, int m, int r) {
-        int n1 = m - l + 1;
-        int n2 = r - m;
+        if (lists == null || lists.length == 0) return null;
 
-        int[] L = new int[n1];
-        int[] R = new int[n2];
-        int i = 0, j = 0, k = l;
-        while ( i < n1) {
-            L[i] = arr[k];
-            i++;
-            k++;
-        }
-        while ( j < n2) {
-            R[j] = arr[k];
-            j++;
-            k++;
-        }
-
-        i = 0;
-        j = 0;
-        k = l;
-        while (i < n1 && j < n2) {
-
-            if (L[i] < R[j]) {
-                arr[k] = L[i];
-                k++;
-                i++;
-            } else {
-                arr[k] = R[j];
-                k++;
-                j++;
+        class ListComparator implements Comparator<ListNode> {
+            @Override
+            public int compare(ListNode o1, ListNode o2) {
+                return o1.val - o2.val;
             }
         }
-        while (i < n1) {
-            arr[k] = L[i];
-            i++;
-            k++;
+        PriorityQueue<ListNode> pq = new PriorityQueue<>(new ListComparator());
+        for (int i = 0; i < lists.length; i++) {
+            pq.offer(lists[i]);
         }
-        while (j < n2) {
-            arr[k] = R[j];
-            j++;
-            k++;
+        ListNode dummy = new ListNode();
+        ListNode curr = dummy;
+        while (pq.size() > 0) {
+            curr.next = pq.poll();
+            curr = curr.next;
+            if (curr.next != null)
+                pq.offer(curr.next);
         }
+
+        return dummy.next;
     }
 
     public static void main(String[] args) {
-        int[] arr = new int[] {3, 2, 1};
-
-        mergeSort(arr, 0, 2);
-        System.out.println(Arrays.toString(arr));
+        ListNode[] lists = new ListNode[]{
+                ListNode.initFrom(new int[]{1,3,5}),
+                ListNode.initFrom(new int[]{2,4,6}),
+                ListNode.initFrom(new int[]{3,5,7})
+        };
+        System.out.println(mergeKSortedList(lists));
     }
-
-
 }
