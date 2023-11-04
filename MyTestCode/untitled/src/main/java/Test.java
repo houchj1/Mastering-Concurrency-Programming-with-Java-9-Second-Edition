@@ -4,29 +4,32 @@ import java.util.*;
 
 public class Test {
 
-    public static int firstMissingPositive(int[] nums) {
-        if (nums == null || nums.length == 0) return 1;
+    public static List<List<Integer>> combination(int[] nums, int k) {
 
-        for (int i = 0; i < nums.length; i++) {
-            if (nums[i] < 0) {
-                nums[i] = Integer.MAX_VALUE;
+        List<List<Integer>> res = new ArrayList<>();
+
+        if (nums == null || nums.length == 0 || k <= 0) return res;
+
+        helper(res, new ArrayList<>(), nums, 0, k);
+
+        return res;
+    }
+    private static void helper(List<List<Integer>> res, List<Integer> curr, int[] nums,
+                               int start_num, int k) {
+        if (curr.size() == k) {
+            res.add(new ArrayList<>(curr));
+        } else {
+
+            for (int i = start_num; i < nums.length; i++) {
+                curr.add(nums[i]);
+                helper(res, curr, nums, i + 1, k);
+                curr.remove(curr.size() - 1);
             }
         }
-        for (int i = 0; i < nums.length; i++) {
-            if (nums[i] <= nums.length) {
-                nums[i] = - nums[i];
-            }
-        }
-        for (int i = 0; i < nums.length; i++) {
-            if (nums[i] > 0) return i + 1;
-        }
-
-        return nums.length + 1;
     }
 
     public static void main(String[] args) {
-        System.out.println(firstMissingPositive(new int[]{1,3}));
+        System.out.println(combination(new int[]{1,2,3}, 2));
     }
-
 
 }
