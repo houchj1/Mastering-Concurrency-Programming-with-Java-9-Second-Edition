@@ -12,6 +12,7 @@ public class RunnableTest {
         final String testlocalFinal = "localFinalString";
 
         String testLocalNonFinal = "testLocalNonFinal";
+        int counter = 1;
 
         Thread test = new Thread(() -> {
             System.out.println("Thread No is " + threadNo);
@@ -23,6 +24,9 @@ public class RunnableTest {
             System.out.println("Thread test Non final string is " + testLocalNonFinal);
 
             System.out.println("Thread name is " + Thread.currentThread().getName());
+
+            System.out.println(counter);
+            // compile error, counter++;
 
         }, "MyRunnableTestThread");
 
