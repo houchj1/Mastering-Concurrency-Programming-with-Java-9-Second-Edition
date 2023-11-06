@@ -1,10 +1,8 @@
 package thread.threadbasic;
 
 
-import java.util.concurrent.CountDownLatch;
-import java.util.concurrent.ExecutorService;
-import java.util.concurrent.Executors;
-import java.util.concurrent.TimeUnit;
+import java.util.concurrent.*;
+import java.util.concurrent.atomic.AtomicInteger;
 
 /**
  * execute thread using Executor, ExecutorService
@@ -33,7 +31,17 @@ public class ExecutorBasic {
         }
     }
 
-    public static void main(String[] args) throws InterruptedException {
+    static class MyCallableTask implements Callable<Integer> {
+
+        static AtomicInteger accum = new AtomicInteger(1);
+        @Override
+        public Integer call() throws Exception {
+            System.out.println("in MyCallableTask...");
+            return accum.incrementAndGet();
+        }
+    }
+
+    public static void main(String[] args) throws InterruptedException, ExecutionException {
         int factor = 1;
         int numThreads = factor *
                 (Runtime.getRuntime().availableProcessors());
@@ -45,6 +53,8 @@ public class ExecutorBasic {
 
         for (int i = 0; i < 10; i++) {
             executor.submit(new MyTask("Task " + i, endController));
+            Future<Integer> future =  executor.submit(new MyCallableTask());
+            System.out.println("The result from callable task is --> " + future.get());
         }
 
         executor.shutdown();
