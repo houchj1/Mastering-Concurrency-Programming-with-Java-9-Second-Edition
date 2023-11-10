@@ -10,9 +10,9 @@ import java.util.concurrent.Executors;
  */
 public class NotSafePetStore {
 
-    protected static NotSafeDataBuffer<IGoods> dataBuffer = new NotSafeDataBuffer<>();
+    protected static IDataBuffer<IGoods> dataBuffer = new NotSafeDataBuffer<>();
 
-    static Callable<IGoods> produceAction = () -> {
+    protected static Callable<IGoods> produceAction = () -> {
         IGoods goods = Goods.produceOne();
         try {
             dataBuffer.add(goods);
@@ -22,7 +22,7 @@ public class NotSafePetStore {
         return goods;
     };
 
-    static Callable<IGoods> consumeAction = () -> {
+    protected static Callable<IGoods> consumeAction = () -> {
         IGoods goods = null;
 
         try {

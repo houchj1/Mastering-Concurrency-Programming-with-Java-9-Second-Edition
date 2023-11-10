@@ -10,7 +10,7 @@ import java.util.concurrent.atomic.AtomicInteger;
  * the one will report error
  * @param <T>
  */
-public class NotSafeDataBuffer<T> {
+public class NotSafeDataBuffer<T> implements IDataBuffer<T>{
 
     public static final int MAX_AMOUNT = 10;
     private List<T> dataList = new LinkedList<>();
