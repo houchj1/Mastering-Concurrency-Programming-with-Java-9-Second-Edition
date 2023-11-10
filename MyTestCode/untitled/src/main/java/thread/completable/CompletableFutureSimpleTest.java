@@ -1,18 +1,25 @@
 package thread.completable;
 
+import common.Print;
+
 import java.util.concurrent.CompletableFuture;
 import java.util.concurrent.ExecutionException;
 
-public class CompletableFutureTest {
+public class CompletableFutureSimpleTest {
 
     public static void main(String[] args) {
 
-        CompletableFuture<Integer> cf = CompletableFuture.supplyAsync( () -> {
+        CompletableFuture<Integer> cf1 = CompletableFuture.supplyAsync(() -> {
+            Print.tco("in cf1.supplyAsync(), this should run in another thread");
             return 1;
+        }).whenComplete((a, throwable) -> {
+            Print.tco("in cf1.whenComplete(), the same thread as cf1.supplyAsync()");
+        }).whenCompleteAsync((a, throwable) -> {
+            Print.tco("in cf1.whenCompleteAsync(), can be in another thread");
         });
 
         try {
-            System.out.println("the ret from cf is " + cf.get());
+            Print.tco("calling cf1.get(), the value is " + cf1.get());
         } catch (InterruptedException e) {
             throw new RuntimeException(e);
         } catch (ExecutionException e) {
@@ -20,12 +27,12 @@ public class CompletableFutureTest {
         }
 
         CompletableFuture<Void> cf2 = CompletableFuture.runAsync(() -> {
-            System.out.println("running in Completable future, current thread is " + Thread.currentThread().getName());
+            Print.tco("in cf2 runAsync");
         });
         try {
             cf2.get();  // as no return value, just for sync with main thread;
 
-            System.out.println("execute in main thread after cf2, current thread is " + Thread.currentThread().getName());
+            Print.tco("cf2 returned");
         } catch (InterruptedException e) {
             throw new RuntimeException(e);
         } catch (ExecutionException e) {
