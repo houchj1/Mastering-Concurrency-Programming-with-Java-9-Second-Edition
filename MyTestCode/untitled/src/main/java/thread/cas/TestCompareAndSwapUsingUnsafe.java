@@ -9,7 +9,7 @@ import java.util.concurrent.CountDownLatch;
 import java.util.concurrent.atomic.AtomicLong;
 
 /**
- * JUC page 164. demo how to use Unsafe class to do the compare and swap. Not Using Atomicxxxx class.
+ * JUC page 164. demo how to use jdk Unsafe class to do the compare and swap. Not Using Atomicxxxx class.
  */
 public class TestCompareAndSwapUsingUnsafe {
 
