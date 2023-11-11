@@ -10,7 +10,7 @@ import java.util.concurrent.Executors;
  * the drawback is that the as the synchronization is on the single SynchronizedDataBuffer instance
  * all producer and consumer actions are serialized (not actually synchronized)
  * and throughput is low.
- * 
+ *
  * Actually Producer and Consumer are not necessarily serialized.
  *
  */
