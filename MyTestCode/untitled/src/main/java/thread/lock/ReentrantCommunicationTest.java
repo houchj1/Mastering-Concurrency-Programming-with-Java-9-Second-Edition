@@ -10,7 +10,7 @@ import java.util.concurrent.locks.ReentrantLock;
 /**
  *
  * JUC page 242.
- * 
+ *
  * TODO: shows how 2 threads communicate with each other using ReentrantLock.newCondition()
  *
  */
