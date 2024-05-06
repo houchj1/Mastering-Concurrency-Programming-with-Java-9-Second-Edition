@@ -26,7 +26,7 @@ public class VolatileNotAtomic {
 
         // following will report error, as volatile is not allowed to be defined as local variable
         // volatile long value2;
-        long value2 = 0;
+        int value2 = 0;
 
         for (int i = 0; i < TASK_AMOUNT; i++) {
             executorService.submit(() -> {
@@ -40,7 +40,9 @@ public class VolatileNotAtomic {
                         value++;
                         valueUsedInStaticMethod++;
                         // error: Variable used in lambda expression should be final or effectively final
-                        // value2++;
+                        // Ideal will remind: "Convert to atomic", it will convert it to AtomicInteger,
+                        // and call value2.getAndIncrement()
+                        //value2++;
                     }
                 } catch (Exception e) {
                     e.printStackTrace();
