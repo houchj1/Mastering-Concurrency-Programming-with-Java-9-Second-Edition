@@ -8,6 +8,7 @@ import java.util.concurrent.atomic.AtomicInteger;
  * 2. 只有在lambda里面修改局部变量，才会触发著名的提示： Variable used in lambda expression should be final or effectively final, ConvertTo AtomicInteger
  *    不修改，只读这个变量的话，是不会提示的，意味着Lambda里面可以只读任何变量（只要有一般权限），但是修改的话必须是Effectively Final
  *
+ *  TODO: 但是下面的MyTestClass里面的成员变量（不是局部变量）却可以在Lambda里面使用testMemberCount1++; ？why 不是局部变量才有Effectively Final吗？
  */
 public class LambdaAccessScope {
 
@@ -37,6 +38,7 @@ public class LambdaAccessScope {
 
 class MyTestClass {
 
+    int testMemberCount1=0;
     public void test(String[] args, String arg1, int arg2, AtomicInteger arg3){
         int arg2Copy = arg2; //TODO：网上的文章是错的，原始类型的局部变量不是Effectively Final，即使是方法参数的
         Thread t1 = new Thread(() -> {
@@ -49,6 +51,9 @@ class MyTestClass {
             arg2Copy++;
             System.out.println(arg2Copy);
             arg3.getAndIncrement();
+
+            System.out.println(testMemberCount1);
+            testMemberCount1++;
         });
     }
 }
